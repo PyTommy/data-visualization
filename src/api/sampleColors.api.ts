@@ -1,7 +1,8 @@
-import { CoreAPI } from './CoreApi'
-import d3 from 'd3'
+import * as d3 from 'd3'
 
-export class SampleColorsAPI extends CoreAPI {
+import { CoreAPI } from './CoreApi'
+
+class _SampleColorsAPI extends CoreAPI {
   constructor() {
     super()
   }
@@ -13,3 +14,5 @@ export class SampleColorsAPI extends CoreAPI {
       return d3.csvParse(data)
     })
 }
+
+export const SampleColorsAPI = new _SampleColorsAPI()
