@@ -1,6 +1,8 @@
+import { PaletteOptions } from '@mui/material'
+
 import { Color } from './color.const'
 
-export const Palette = {
+export const Palette: PaletteOptions = {
   text: {
     primary: Color.textPrimary,
     secondary: Color.textSecondary,
@@ -32,4 +34,8 @@ export const Palette = {
     dark: Color.successDark,
   },
   divider: Color.divider,
+  background: {
+    default: Color.background,
+    paper: Color.background,
+  },
 } as const
