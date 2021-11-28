@@ -40,4 +40,7 @@ module.exports = {
     plugins: [new TsconfigPathsPlugin()],
     extensions: ['.ts', '.js', '.tsx'],
   },
+  devServer: {
+    historyApiFallback: true,
+  },
 }

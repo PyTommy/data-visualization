@@ -1,3 +1,4 @@
+import { ListItem } from '@mui/material'
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
@@ -14,6 +15,7 @@ const menuList: MenuItem[] = [
     path: '/',
     title: 'Home',
   },
+  { path: '/plots', title: 'Plots' },
 ]
 
 export const SideMenu: React.FC<Props> = ({ open }) => {
@@ -21,9 +23,11 @@ export const SideMenu: React.FC<Props> = ({ open }) => {
     <StyledDrawer open={open}>
       <nav>
         {menuList.map(({ title, path }) => (
-          <NavLink to={path} key={title}>
-            {title}
-          </NavLink>
+          <ListItem key={title}>
+            <NavLink to={path} key={title}>
+              {title}
+            </NavLink>
+          </ListItem>
         ))}
       </nav>
     </StyledDrawer>
