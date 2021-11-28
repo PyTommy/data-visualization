@@ -17,8 +17,8 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({ toggleMenu }) => {
   return (
-    <AppBarContainer>
-      <MuiAppBar position="static">
+    <div>
+      <AppBar position="static">
         <LinearProgress />
         <Toolbar>
           <IconButton
@@ -34,11 +34,11 @@ export const Header: React.FC<HeaderProps> = ({ toggleMenu }) => {
             DataVisualization
           </Typography>
         </Toolbar>
-      </MuiAppBar>
-    </AppBarContainer>
+      </AppBar>
+    </div>
   )
 }
 
-const AppBarContainer = styled.div`
+const AppBar = styled(MuiAppBar)`
   color: ${Color.secondary};
 `

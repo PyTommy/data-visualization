@@ -1,4 +1,5 @@
 import React from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { RecoilRoot } from 'recoil'
 
 import HomePage from './pages/HomePage'
@@ -8,12 +9,16 @@ import { ThemeProvider } from 'components/ThemeProvider'
 export const App = () => {
   console.log('App')
   return (
-    <RecoilRoot>
-      <ThemeProvider>
-        <Layout>
-          <HomePage />
-        </Layout>
-      </ThemeProvider>
-    </RecoilRoot>
+    <BrowserRouter>
+      <RecoilRoot>
+        <ThemeProvider>
+          <Layout>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+            </Routes>
+          </Layout>
+        </ThemeProvider>
+      </RecoilRoot>
+    </BrowserRouter>
   )
 }

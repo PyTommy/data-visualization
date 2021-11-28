@@ -1,5 +1,5 @@
-import { List, ListItem, ListItemText } from '@mui/material'
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 import styled from 'styled-components'
 
@@ -7,16 +7,25 @@ interface Props {
   open: boolean
 }
 
+type MenuItem = { path: string; title: string }
+
+const menuList: MenuItem[] = [
+  {
+    path: '/',
+    title: 'Home',
+  },
+]
+
 export const SideMenu: React.FC<Props> = ({ open }) => {
   return (
     <StyledDrawer open={open}>
-      <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text) => (
-          <ListItem button key={text}>
-            <ListItemText primary={text} />
-          </ListItem>
+      <nav>
+        {menuList.map(({ title, path }) => (
+          <NavLink to={path} key={title}>
+            {title}
+          </NavLink>
         ))}
-      </List>
+      </nav>
     </StyledDrawer>
   )
 }
