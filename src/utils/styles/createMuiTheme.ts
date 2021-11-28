@@ -3,10 +3,10 @@ import createTheme, {
 } from '@mui/material/styles/createTheme'
 import shadows, { Shadows } from '@mui/material/styles/shadows'
 
-import { BreakPoints } from '@/utils/styles/breakPoints.const'
-import { Color } from '@/utils/styles/color.const'
-import { Palette } from '@/utils/styles/palette.const'
-import { Shape } from '@/utils/styles/shape.const'
+import { BreakPoints } from 'utils/styles/breakPoints.const'
+import { Color } from 'utils/styles/color.const'
+import { Palette } from 'utils/styles/palette.const'
+import { Shape } from 'utils/styles/shape.const'
 
 const defaultMuiThemeOptions: MuiThemeOptions = {
   palette: Palette,

@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { SampleColorsAPI } from '@/api'
-import { useAsync } from '@/hooks/useAsync'
+import { SampleColorsAPI } from 'api'
+import { useAsync } from 'hooks/useAsync'
 
 export const HomePage = () => {
   const { state } = useAsync(() => SampleColorsAPI.getCsv(), [])

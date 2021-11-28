@@ -2,12 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
-      "@atoms/*": ["src/components/atoms/*"],
-      "@molecules/*": ["src/components/molecules/*"],
-      "@organisms/*": ["src/components/organisms/*"],
-      "@templates/*": ["src/components/templates/*"],
-      "@utils/*": ["src/utils/*"],
+      "*": ["src/*"],
 
       // @muiでstyled-componentsを使うための設定 : https://mui.com/guides/styled-engine/
       "@mui/styled-engine": ["./node_modules/@mui/styled-engine-sc"]

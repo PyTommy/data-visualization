@@ -1,7 +1,7 @@
 import { DependencyList, useCallback } from 'react'
 import { useAsyncFn as useRUAsyncFn } from 'react-use'
 
-import { useAsyncState } from '@/state/async.state'
+import { useAsyncState } from 'state/async.state'
 
 // 参照: https://github.com/streamich/react-use/blob/32ce09d8ae04b1e7bdd4dc62602187ce85f1bec3/src/useAsyncFn.ts
 

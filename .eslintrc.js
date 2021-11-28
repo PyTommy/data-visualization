@@ -29,7 +29,6 @@ module.exports = {
     },
   },
   rules: {
-    // code styles
     quotes: ['error', 'single'],
     semi: ['error', 'never'],
     'max-lines-per-function': ['error', { max: 100 }],
@@ -69,6 +68,12 @@ module.exports = {
         ],
         alphabetize: { order: 'asc' },
         'newlines-between': 'always',
+      },
+    ],
+    'import/no-internal-modules': [
+      'error',
+      {
+        forbid: ['components/*/*', 'pages/*/*', 'api/*'],
       },
     ],
   },
