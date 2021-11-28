@@ -92,5 +92,11 @@ module.exports = {
         'import/no-named-export': 'error',
       },
     },
+    {
+      files: ['./src/stories/**/*'],
+      rules: {
+        'import/no-default-export': 'off',
+      },
+    },
   ],
 }
