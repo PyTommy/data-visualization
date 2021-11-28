@@ -1,4 +1,4 @@
-import { ThemeProvider } from '../src/components/organisms/common/ThemeProvider'
+import { ThemeProvider } from '../src/components/ThemeProvider'
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
