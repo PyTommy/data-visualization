@@ -1,25 +1,28 @@
 import MenuIcon from '@mui/icons-material/Menu'
 import {
-  Box,
   AppBar as MuiAppBar,
   Toolbar,
   IconButton,
   Typography,
   LinearProgress,
-  Button,
 } from '@mui/material'
 import React from 'react'
 
 import styled from 'styled-components'
 import { Color } from 'utils/styles/color.const'
 
-export const Header: React.FC = () => {
+interface HeaderProps {
+  toggleMenu: () => void
+}
+
+export const Header: React.FC<HeaderProps> = ({ toggleMenu }) => {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+    <AppBarContainer>
+      <MuiAppBar position="static">
         <LinearProgress />
         <Toolbar>
           <IconButton
+            onClick={toggleMenu}
             size="large"
             edge="start"
             color="inherit"
@@ -30,13 +33,12 @@ export const Header: React.FC = () => {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             DataVisualization
           </Typography>
-          <Button color="inherit">Login</Button>
         </Toolbar>
-      </AppBar>
-    </Box>
+      </MuiAppBar>
+    </AppBarContainer>
   )
 }
 
-const AppBar = styled(MuiAppBar)`
+const AppBarContainer = styled.div`
   color: ${Color.secondary};
 `

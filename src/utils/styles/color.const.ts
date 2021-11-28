@@ -23,8 +23,8 @@ export const Color = {
   warningLight: '#ffbd45',
   warningDark: '#c25e00',
 
-  textPrimary: '#17172b',
-  textSecondary: '#3e3d54',
+  textPrimary: 'rgba(0, 0, 0, 0.87)',
+  textSecondary: 'rgba(0, 0, 0, 0.54)',
   textDisabled: 'rgba(0, 0, 0, 0.38)',
 
   divider: 'rgba(0, 0, 0, 0.12)',
