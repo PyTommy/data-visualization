@@ -54,7 +54,13 @@ module.exports = {
     'import/no-restricted-paths': [
       'error',
       {
-        zones: [],
+        zones: [
+          {
+            target: './src/!(hooks)/**/*',
+            from: 'node_modules/react-use',
+            message: 'react-useはhooksフォルダーからのみ参照可',
+          },
+        ],
       },
     ],
     'sort-imports': 0,
