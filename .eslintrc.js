@@ -47,6 +47,7 @@ module.exports = {
 
     // import
     'import/no-named-as-default-member': 'off',
+    'import/no-default-export': 'error',
     'import/no-deprecated': 'error',
     'import/first': 'error',
     'import/no-duplicates': 'error',
@@ -83,4 +84,13 @@ module.exports = {
       },
     ],
   },
+  overrides: [
+    {
+      files: ['./src/pages/*/index.{ts,tsx}'],
+      rules: {
+        'import/no-default-export': 'off',
+        'import/no-named-export': 'error',
+      },
+    },
+  ],
 }
