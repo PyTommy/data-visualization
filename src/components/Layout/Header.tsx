@@ -4,10 +4,10 @@ import {
   Toolbar,
   IconButton,
   Typography,
-  LinearProgress,
 } from '@mui/material'
 import React from 'react'
 
+import { ProgressBar } from './ProgressBar'
 import styled from 'styled-components'
 import { Color } from 'utils/styles/color.const'
 
@@ -19,7 +19,7 @@ export const Header: React.FC<HeaderProps> = ({ toggleMenu }) => {
   return (
     <div>
       <AppBar position="static">
-        <LinearProgress />
+        <ProgressBar />
         <Toolbar>
           <IconButton
             onClick={toggleMenu}
