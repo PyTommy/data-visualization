@@ -16,25 +16,37 @@ const defaultMuiThemeOptions: MuiThemeOptions = {
     values: BreakPoints,
   },
   typography: {
-    fontSize: 12,
+    // fontSize: 16,
     h1: {
       color: Color.primary,
       display: 'block',
+      fontSize: '2em',
+      fontWeight: 'bold',
     },
     h2: {
       color: Color.primary,
+      fontSize: '1.5em',
+      fontWeight: 'bold',
     },
     h3: {
       color: Color.primary,
+      fontSize: '1.17em',
+      fontWeight: 'bold',
     },
     h4: {
       color: Color.primary,
+      fontSize: '1em',
+      fontWeight: 'bold',
     },
     h5: {
       color: Color.primary,
+      fontSize: '0.83em',
+      fontWeight: 'bold',
     },
     h6: {
       color: Color.primary,
+      fontSize: '0.67em',
+      fontWeight: 'bold',
     },
   },
 } as const
